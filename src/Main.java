@@ -38,9 +38,9 @@ public class Main {
                 }
             });
 
-            Document doc = builder.parse("Note.xml");
+            Document doc = builder.parse("Blog.xml");
 
-            NodeList node = doc.getElementsByTagName("to");
+            NodeList node = doc.getElementsByTagName("name");
             System.out.println(node.item(0).getNodeName());
             System.out.println(node.item(0).getTextContent());
 

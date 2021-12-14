@@ -1,0 +1,20 @@
+<!ELEMENT blog (authors, posts)>
+<!ELEMENT authors (author*)>
+<!ELEMENT posts (post*)>
+<!ELEMENT author (name, email)>
+<!ATTLIST author id ID #REQUIRED>
+<!ELEMENT name (#PCDATA)>
+<!ELEMENT email (#PCDATA)>
+<!ELEMENT post (title, poster, tags?, content, owner)>
+<!ATTLIST post status (publish|draft) #REQUIRED>
+<!ELEMENT title (#PCDATA)>
+<!ELEMENT poster (source+)>
+<!ELEMENT source EMPTY>
+<!ATTLIST source src CDATA #REQUIRED device (desktop|mobile|tablet) #IMPLIED>
+<!ELEMENT content (#PCDATA)>
+<!ELEMENT tags (tag+)>
+<!ELEMENT tag (#PCDATA)>
+<!ELEMENT owner EMPTY>
+<!ATTLIST owner id IDREFS #REQUIRED>
+
+
