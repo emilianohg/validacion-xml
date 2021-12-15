@@ -43,6 +43,7 @@ public class WindowXMLViewer extends JFrame {
 
                 if(nodo.getChildNodes() != null) {
                     for(int i=0 ; i < nodo.getChildNodes().getLength() ; i++) {
+
                         for(int j=0 ; j < nodo.getAttributes().getLength() ; j++) {
                             procesarDOM(nodo.getAttributes().item(j));
                         }

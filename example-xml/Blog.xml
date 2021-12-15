@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE blog SYSTEM "Blog.dtd">
+<blog>
+    <authors>
+        <author id="emilianohg">
+            <name>Emiliano Hernández Guerrero</name>
+            <email>emilianohg@example.com</email>
+        </author>
+        <author id="efra">
+            <name>Efrain Amarillas</name>
+            <email>efra@example.com</email>
+        </author>
+        <author id="gerry">
+            <name>Luis Gerardo Aguilar</name>
+            <email>gerry@example.com</email>
+        </author>
+    </authors>
+    <posts>
+        <post status="publish">
+            <title>Titulo 1</title>
+            <poster>
+                <source src="http://www.example.com/images/poster-desktop.jpg" device="desktop"/>
+                <source src="http://www.example.com/images/poster-mobile.jpg" device="mobile"/>
+                <source src="http://www.example.com/images/poster.jpg"/>
+            </poster>
+            <tags>
+                <tag>lorem</tag>
+                <tag>ipsum</tag>
+            </tags>
+            <content>Lorem ipsum dolor sit amet...</content>
+            <owner id="emilianohg"/>
+        </post>
+        <post status="draft">
+            <title>Titulo 2</title>
+            <poster>
+                <source src="http://www.example.com/images/poster.jpg"/>
+            </poster>
+            <content>Lorem ipsum dolor sit amet...</content>
+            <owner id="gerry"/>
+        </post>
+    </posts>
+</blog>
+
