@@ -19,6 +19,15 @@ public class Window extends JFrame {
     JLabel labelfilaName;
 
     public Window() {
+
+        Icon leafIcon = new ImageIcon("right-chevron.png");
+        Icon openIcon = new ImageIcon("tag.png");
+        Icon closedIcon = new ImageIcon("tag-blue.png");
+
+        UIManager.put("Tree.leafIcon", leafIcon);
+        UIManager.put("Tree.openIcon", openIcon);
+        UIManager.put("Tree.closedIcon", closedIcon);
+
         setTitle("Procesar XML");
         setResizable(false);
         setSize(430, 150);
@@ -83,7 +92,7 @@ public class Window extends JFrame {
     }
 
     public void openXML() {
-        this.fileXML = this.openFile("XML", "Archivos .xml");
+        this.fileXML = this.openFile("XML", "Archivo .xml");
         if (this.fileXML.isPresent()) {
             labelfilaName.setText("Archivo: " + this.fileXML.get().getName());
         }

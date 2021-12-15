@@ -30,12 +30,12 @@ class XmlJTree extends JTree {
             setFile(file);
     }
 
-    public void setFile(File filePath) {
+    public void setFile(File file) {
         Node root = null;
         try {
             DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
             DocumentBuilder builder = factory.newDocumentBuilder();
-            Document doc = builder.parse(filePath);
+            Document doc = builder.parse(file);
             root = (Node) doc.getDocumentElement();
         } catch (Exception ex) {
             JOptionPane.showMessageDialog(
@@ -56,7 +56,10 @@ class XmlJTree extends JTree {
         DefaultMutableTreeNode dmtNode;
 
         dmtNode = new DefaultMutableTreeNode(root.getNodeName());
-        if (root.getChildNodes().getLength() == 1) {
+
+        NodeList nodeList = root.getChildNodes();
+
+        if (nodeList.getLength() == 1) {
             dmtNode = new DefaultMutableTreeNode(
                     MessageFormat.format("{0}: {1}",
                     root.getNodeName(),
@@ -65,7 +68,6 @@ class XmlJTree extends JTree {
             );
         }
 
-        NodeList nodeList = root.getChildNodes();
         for (int count = 0; count < nodeList.getLength(); count++) {
             Node tempNode = nodeList.item(count);
 
