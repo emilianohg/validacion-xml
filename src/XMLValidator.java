@@ -25,24 +25,19 @@ public class XMLValidator {
             builder.setErrorHandler(new ErrorHandler() {
                 public void warning(SAXParseException e) throws SAXException {
                     System.out.println("Warning: ");
-                    printInfo(e);
+                    addError(e);
                 }
                 public void error(SAXParseException e) throws SAXException {
                     System.out.println("Error: ");
-                    printInfo(e);
+                    addError(e);
                 }
                 public void fatalError(SAXParseException e)
                         throws SAXException {
                     System.out.println("Fattal error: ");
-                    printInfo(e);
+                    addError(e);
                 }
 
-                private void printInfo(SAXParseException e) {
-                    System.out.println("   Public ID: "+e.getPublicId());
-                    System.out.println("   System ID: "+e.getSystemId());
-                    System.out.println("   Line number: "+e.getLineNumber());
-                    System.out.println("   Column number: "+e.getColumnNumber());
-                    System.out.println("   Message: "+e.getMessage());
+                private void addError(SAXParseException e) {
                     errors.add(new ErrorXML(
                             e.getLineNumber(),
                             e.getColumnNumber(),
@@ -60,7 +55,6 @@ public class XMLValidator {
             }
 
             return true;
-
 
         } catch (ParserConfigurationException | IOException | SAXException e) {
             e.printStackTrace();

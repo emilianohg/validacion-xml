@@ -80,9 +80,4 @@ class XmlJTree extends JTree {
         return dmtNode;
     }
 
-
-    @Override
-    public TreeCellRenderer getCellRenderer() {
-        return super.getCellRenderer();
-    }
 }
