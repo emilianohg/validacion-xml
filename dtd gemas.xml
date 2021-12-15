@@ -1,8 +1,0 @@
-<!DOCTYPE GEMAS [
-<!ELEMENT GEMA (nombre,color,dureza,fractura,,clase)>
-<!ATTLIST GEMA escasez (comun|rara|extraña) rara>
-<!ELEMENT NOMBRE(#CDATA)>
-<!ELEMENT color(#CDATA)>
-<!ELEMENT dureza(#CDATA)>
-<!ELEMENT fractura(#CDATA)>
-<!ELEMENT clase(#CDATA)>
