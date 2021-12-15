@@ -8,7 +8,6 @@ public class WindowError extends JFrame {
     private List<ErrorXML> errors;
 
     public WindowError(List<ErrorXML> errors) {
-        //array bidimencional de objetos con los datos de la tabla
         Object[][] data = new Object[errors.size()][3];
 
         for (int i = 0; i < errors.size(); i++) {
