@@ -12,7 +12,6 @@ public class WindowXMLViewer extends JFrame {
 
 
     public WindowXMLViewer(Document doc) {
-        jTree = new JTree();
         procesarDOM(doc);
         add(jTree);
 
@@ -39,7 +38,7 @@ public class WindowXMLViewer extends JFrame {
 
                 if (isFirstElement) {
                     this.isFirstElement = false;
-                    this.jTree.add(xmlElement);
+                    this.jTree = new JTree(xmlElement);
                 }
 
                 if(nodo.getChildNodes() != null) {
@@ -47,6 +46,7 @@ public class WindowXMLViewer extends JFrame {
                         for(int j=0 ; j < nodo.getAttributes().getLength() ; j++) {
                             procesarDOM(nodo.getAttributes().item(j));
                         }
+
                         Node childNode = nodo.getChildNodes().item(i);
                         DefaultMutableTreeNode xmlChildElement = new DefaultMutableTreeNode(nombre);
                         xmlElement.add(xmlChildElement);

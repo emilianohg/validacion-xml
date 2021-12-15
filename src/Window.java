@@ -1,3 +1,5 @@
+import org.w3c.dom.Document;
+
 import javax.swing.*;
 import javax.swing.filechooser.FileNameExtensionFilter;
 import java.awt.*;
@@ -54,8 +56,10 @@ public class Window extends JFrame {
             return;
         }
 
-        if (validator.validate(this.fileXML.get()) != null) {
-            new WindowXMLViewer();
+        Document doc = validator.validate(this.fileXML.get());
+
+        if (doc != null) {
+            new WindowXMLViewer(doc);
         }
     }
 
