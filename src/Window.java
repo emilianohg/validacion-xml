@@ -56,10 +56,9 @@ public class Window extends JFrame {
             return;
         }
 
-        Document doc = validator.validate(this.fileXML.get());
-
-        if (doc != null) {
-            new WindowXMLViewer(doc);
+        File file = this.fileXML.get();
+        if (validator.validate(file)) {
+            new WindowXMLViewer(file);
         }
     }
 

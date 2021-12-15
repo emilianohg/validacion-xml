@@ -19,9 +19,9 @@
         <post status="publish">
             <title>Titulo 1</title>
             <poster>
-                <source src="http://www.example.com/images/poster-desktop.jpg" device="desktop"/>
-                <source src="http://www.example.com/images/poster-mobile.jpg" device="mobile"/>
-                <source src="http://www.example.com/images/poster.jpg"/>
+                <source device="desktop">http://www.example.com/images/poster-desktop.jpg</source>
+                <source device="mobile">http://www.example.com/images/poster-mobile.jpg</source>
+                <source>http://www.example.com/images/poster.jpg</source>
             </poster>
             <tags>
                 <tag>lorem</tag>
@@ -33,7 +33,7 @@
         <post status="draft">
             <title>Titulo 2</title>
             <poster>
-                <source src="http://www.example.com/images/poster.jpg"/>
+                <source>http://www.example.com/images/poster.jpg</source>
             </poster>
             <content>Lorem ipsum dolor sit amet...</content>
             <owner id="gerry"/>

@@ -9,8 +9,8 @@
 <!ATTLIST post status (publish|draft) #REQUIRED>
 <!ELEMENT title (#PCDATA)>
 <!ELEMENT poster (source+)>
-<!ELEMENT source EMPTY>
-<!ATTLIST source src CDATA #REQUIRED device (desktop|mobile|tablet) #IMPLIED>
+<!ELEMENT source (#PCDATA)>
+<!ATTLIST source device (desktop|mobile|tablet) #IMPLIED>
 <!ELEMENT content (#PCDATA)>
 <!ELEMENT tags (tag+)>
 <!ELEMENT tag (#PCDATA)>

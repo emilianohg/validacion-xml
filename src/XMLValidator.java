@@ -22,7 +22,7 @@ public class XMLValidator {
 
     }
 
-    public Document validate(File xml) {
+    public boolean validate(File xml) {
         DocumentBuilderFactory domFactory = DocumentBuilderFactory.newInstance();
 
         domFactory.setValidating(true);
@@ -65,17 +65,17 @@ public class XMLValidator {
             Document doc = builder.parse(xml);
             if (errors.size() > 0) {
                 new WindowError(errors);
-                return null;
+                return false;
             }
 
-            return doc;
+            return true;
 
 
         } catch (ParserConfigurationException | IOException | SAXException e) {
             e.printStackTrace();
         }
 
-        return null;
+        return false;
     }
 
     private static class MyErrorHandler implements ErrorHandler {
