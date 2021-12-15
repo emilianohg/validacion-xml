@@ -12,7 +12,7 @@ public class Window extends JFrame {
     JButton btnFileChooserXML;
     JButton btnValidate;
 
-    Optional<File> fileXML;
+    Optionaºl<File> fileXML;
 
     XMLValidator validator;
 

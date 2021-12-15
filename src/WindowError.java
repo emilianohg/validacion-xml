@@ -28,11 +28,10 @@ public class WindowError extends JFrame {
         table.getColumnModel().getColumn(1).setPreferredWidth(50);
         table.getColumnModel().getColumn(2).setPreferredWidth(50);
 
-
         table.setPreferredScrollableViewportSize(new Dimension(700, 200));
-        //Creamos un JscrollPane y le agregamos la JTable
+
         JScrollPane scrollPane = new JScrollPane(table);
-        //Agregamos el JScrollPane al contenedor
+
         getContentPane().add(scrollPane, BorderLayout.CENTER);
 
         setSize(700, 200);

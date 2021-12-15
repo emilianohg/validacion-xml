@@ -7,17 +7,16 @@ import java.io.File;
 
 public class WindowXMLViewer extends JFrame {
 
-
     boolean isFirstElement = true;
 
-
     public WindowXMLViewer(File file) {
-        JTree jTree = new XmlJTree(file);
-        add(new JScrollPane(jTree));
-
         setTitle("Visor XML");
         setSize(800, 600);
         setLocationRelativeTo(null);
+
+        JTree jTree = new XmlJTree(file);
+        add(new JScrollPane(jTree));
+
         setVisible(true);
     }
 
